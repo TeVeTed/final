@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EPAM</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet" /> -->
+</head>
+<body>
+<header>
+    <div class="container" ng-app="myapp">
+        <div ng-controller="MainController">
+            <div class="navbar navbar-default ">
+                <ul class="nav navbar-nav">
+                    <li ng-class="{dropdown: menu.menus}" ng-repeat="menu in menus">
+                        <a href="{{menu.action}}" data-toggle="dropdown" ng-click="click($event)" ng-class="{'dropdown-toggle': menu.menus}">{{menu.title}}<span class="caret"></span></a>
+                        <ul class="dropdown-menu" ng-if="menu.menus">
+                            <li ng-repeat="submenu in menu.menus">
+                                <a href="{{submenu.action}}">{{submenu.title}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+	<section class="knowledge-sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="knowledge" ng-app="sliderApp">
+						<div ng-controller="CarouselDemoCtrl" id="slides_control">
+							<div>
+								<carousel interval="myInterval">
+									<slide ng-repeat="slide in slides" active="slide.active">
+										<img class="slider-img" ng-src="{{slide.image}}">
+										<div class="knowledge-item carousel-caption">
+										</div>
+									</slide>
+								</carousel>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 footer-pos">
+					<div class="logo">
+						<img src="assets/img/logo.png" alt="Logo" />
+						<p class="logo-title">
+							education
+						</p>
+					</div>
+					<ul class="footer-list navbar">
+						<li class="footer-item">home</li>
+						<li class="footer-item">about us</li>
+						<li class="footer-item">courses</li>
+						<li class="footer-item">teachrer</li>
+						<li class="footer-item">programs</li>
+						<li class="footer-item">contact</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/lib/ui-bootstrap-tpls-0.12.0.min.js"></script>
+	<script  src="js/sliderApp.js"></script>
+	<script  src="js/navApp.js"></script>
+</body>
+</html>
