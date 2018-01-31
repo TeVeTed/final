@@ -12,5 +12,9 @@ app.controller('testsController',
                 $scope.loaded=true;
                 window.location = "#!/test";
             });
+
+            $scope.username = function () {
+                $scope.statistic.username = prompt('Please enter your name to collect your personal statictic');
+            }
         };
     });

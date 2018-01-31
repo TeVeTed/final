@@ -4,15 +4,16 @@
         <div ng-repeat="question in test.questions"
              class="question-item">
             <p>{{question.question}}</p>
-            <form>
+            <form name="testQuestion">
+                <input type="hidden" name="number" value="$index+1">
                 <div class="radio" ng-repeat="variant in question.variants">
                     <label>
-                        <input type="radio">
+                        <input type="radio" value="$index" ng-model="statistic.answers">
                         {{variant.variant}}
                     </label>
                 </div>
                 <br>
-                <input type="submit" value=" Next ">
+                <input type="submit" value=" Submit " ng-click="answer()">
             </form>
         </div>
         <div>
