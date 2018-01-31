@@ -1,0 +1,104 @@
+[
+  {
+    "test": {
+      "name": "HTML",
+      "description": "Check your knowledge level about the basic hypertext markup concepts",
+      "questions":
+      [{
+        "question": "What does HTML stand for?",
+        "variants":
+        [{
+          "variant": "Hyper Text Markup Language",
+          "correct": "true"
+        },{
+          "variant": "Hyperlinks and Text Markup Language",
+          "correct": "false"
+        },{
+          "variant": "Home Tool Markup Language",
+          "correct": "false"
+        }]
+      },{
+        "question": "Who is making the Web standards?",
+        "variants":
+        [{
+          "variant": "Microsoft",
+          "correct": "false"
+        },{
+          "variant": "Mozilla",
+          "correct": "false"
+        },{
+          "variant": "Google",
+          "correct": "false"
+        },{
+          "variant": "The World Wide Web Consortium",
+          "correct": "true"
+        }]
+      },{
+        "question": "Choose the correct HTML element for the largest heading:",
+        "variants":
+        [{
+          "variant": "<h6>",
+          "correct": "false"
+        },{
+          "variant": "<h1>",
+          "correct": "true"
+        },{
+          "variant": "<head>",
+          "correct": "false"
+        },{
+          "variant": "<heading>",
+          "correct": "false"
+        }]
+      }]
+    }
+  },{
+  "test": {
+    "name": "CSS",
+    "description": "Find out your knowledge level in the web page styling field",
+    "questions":
+    [{
+      "question": "What does CSS stand for?",
+      "variants":
+      [{
+        "variant": "Colorful Style Sheets",
+        "correct": "false"
+      },{
+        "variant": "Computer Style Sheets",
+        "correct": "false"
+      },{
+        "variant": "Cascading Style Sheets",
+        "correct": "true"
+      },{
+        "variant": "Creative Style Sheets",
+        "correct": "false"
+      }]
+    },{
+      "question": "What is the correct HTML for referring to an external style sheet?",
+      "variants":
+      [{
+        "variant": "<style src=\"mystyle.css\">",
+        "correct": "false"
+      },{
+        "variant": "<stylesheet>mystyle.css</stylesheet>",
+        "correct": "false"
+      },{
+        "variant": "<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">",
+        "correct": "true"
+      }]
+    },{
+      "question": "Where in an HTML document is the correct place to refer to an external style sheet?",
+      "variants":
+      [{
+        "variant": "At the end of the document",
+        "correct": "false"
+      },{
+        "variant": "In the <body> section",
+        "correct": "false"
+      },{
+        "variant": "In the <head> section",
+        "correct": "true"
+      }]
+    }]
+  }
+}
+]

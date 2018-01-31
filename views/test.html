@@ -1,0 +1,25 @@
+<div ng-controller="testController">
+    <div>
+        <h1><span>{{test.name}}</span> Test</h1>
+        <div ng-repeat="question in test.questions"
+             class="question-item">
+            <p>{{question.question}}</p>
+            <form>
+                <div class="radio" ng-repeat="variant in question.variants">
+                    <label>
+                        <input type="radio">
+                        {{variant.variant}}
+                    </label>
+                </div>
+                <br>
+                <input type="submit" value=" Next ">
+            </form>
+        </div>
+        <div>
+            <div>
+                <div>Total {{test.questions.length}} questions</div>
+                <div>Time left 0:00</div>
+            </div>
+        </div>
+    </div>
+</div>
