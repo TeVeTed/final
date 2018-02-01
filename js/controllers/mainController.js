@@ -1,5 +1,5 @@
 app.controller('mainController',
-    function mainController($rootScope, $scope, $location) {
+    function mainController($rootScope, $scope, $location, $localStorage) {
         $scope.incoming = {test: ""};
         $scope.currentPath = $location.path();
 
@@ -11,4 +11,6 @@ app.controller('mainController',
         });
 
         $scope.statistic = {};
+
+        $localStorage.statistic = [];
 });

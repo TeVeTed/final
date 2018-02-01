@@ -1,26 +1,28 @@
-<div ng-controller="testController">
-    <div>
-        <h1><span>{{test.name}}</span> Test</h1>
-        <div ng-repeat="question in test.questions"
-             class="question-item">
-            <p>{{question.question}}</p>
-            <form name="testQuestion">
-                <input type="hidden" name="number" value="$index+1">
-                <div class="radio" ng-repeat="variant in question.variants">
-                    <label>
-                        <input type="radio" value="$index" ng-model="statistic.answers">
-                        {{variant.variant}}
-                    </label>
-                </div>
-                <br>
-                <input type="submit" value=" Submit " ng-click="answer()">
-            </form>
-        </div>
+<section class="testContainer">
+    <div ng-controller="testController">
         <div>
+            <h1><span>{{test.name}}</span> Test</h1>
+            <div ng-repeat="question in test.questions" ng-init="parentIndex = $index"
+                 class="question-item bodyTest">
+                <p>{{question.question}}</p>
+                <form name="testQuestion" ng-submit="answer(parentIndex)">
+                    <input type="hidden" name="number" value="{{parentIndex+1}}">
+                    <div class="radio" ng-repeat="variant in question.variants">
+                        <label>
+                            <input type="radio" ng-model="answerQuest[parentIndex]" name="quiz" value="{{$index}}">
+                            {{variant.variant}}
+                        </label>
+                    </div>
+                    <br>
+                    <input type="submit" value=" Submit " class="testBtnSub">
+                </form>
+            </div>
             <div>
-                <div>Total {{test.questions.length}} questions</div>
-                <div>Time left 0:00</div>
+                <div>
+                    <div>Total {{test.questions.length}} questions</div>
+                    <div>Time left 0:00</div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>

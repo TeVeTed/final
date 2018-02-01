@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.bootstrap', 'ngRoute']).
+var app = angular.module('app', ['ui.bootstrap', 'ngRoute', 'ngStorage']).
     config(function ($routeProvider) {
         $routeProvider.when('/tests',
             {

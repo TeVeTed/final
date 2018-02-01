@@ -1,3 +1,5 @@
-<ul class="leftbar" ng-controller="testController">
-    <li ng-repeat="question in test.questions"><a href="#!/test" ng-click="questItem($index)">{{question.question}}</a></li>
-</ul>
+<section class="leftBarSection">
+    <ul class="leftbar" ng-controller="testController">
+        <li ng-repeat="question in test.questions" class="leftbarItem"><a href="#!/test" ng-click="questItem($index)">{{question.question}}</a></li>
+    </ul>
+</section>
